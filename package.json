@@ -1,0 +1,29 @@
+{
+  "name": "meanfirstprojectlocal",
+  "version": "1.0.0",
+  "description": "First mean project",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "mongojs": "^2.4.0",
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardovasquezpe/meanfirstproject.git"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "author": "ricardovasquezpe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardovasquezpe/meanfirstproject/issues"
+  },
+  "homepage": "https://github.com/ricardovasquezpe/meanfirstproject#readme"
+}
