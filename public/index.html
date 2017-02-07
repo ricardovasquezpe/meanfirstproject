@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html ng-app="mean_project" ng-cloak>
+	<head>
+		<title>Contact list app</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	</head>
+	<body ng-controller="indexCtrl">
+		<h1>Contact list app</h1>
+		<div layout="row" ng-repeat="contact in contactList">
+			<div flex>
+				<md-input-container>
+			        <label>Name</label>
+			        <input value="{{contact.name}}" disabled>
+			    </md-input-container>
+			</div>
+			<div flex>
+				<md-input-container>
+			        <label>Email</label>
+			        <input value="{{contact.email}}" disabled>
+			    </md-input-container>
+			</div>
+			<div flex>
+				<md-input-container>
+			        <label>Number</label>
+			        <input value="{{contact.number}}" disabled>
+			    </md-input-container>
+			</div>
+			<div flex>
+				<md-button class="md-raised md-warn" ng-click="removeContact(contact._id)">Remove</md-button>
+				<md-button class="md-raised" ng-click="selectContact(contact._id)">Select</md-button>
+			</div>
+		</div>
+		<div layout="row">
+			<div flex>
+				<md-input-container>
+			        <label>Name</label>
+			        <input ng-model="contact.name">
+			    </md-input-container>
+			</div>
+			<div flex>
+				<md-input-container>
+			        <label>Email</label>
+			        <input ng-model="contact.email">
+			    </md-input-container>
+			</div>
+			<div flex>
+				<md-input-container>
+			        <label>Number</label>
+			        <input ng-model="contact.number">
+			    </md-input-container>
+			</div>
+			<div flex>
+				<md-button class="md-raised md-primary" ng-click="addContact()">Add</md-button>
+				<md-button class="md-raised" ng-click="redir()">Update</md-button>
+			</div>
+		</div>
+
+		<div ng-view>
+			
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="js/angular-aria.min.js"></script>
+	<script type="text/javascript" src="js/angular-messages.min.js"></script>
+	<script type="text/javascript" src="js/angular-material.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="controllers/indexCtrl.js"></script>
+</html>

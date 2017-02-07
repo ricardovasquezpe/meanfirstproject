@@ -1,0 +1,1 @@
+var app = angular.module('mean_project', ['ngMaterial', 'ngRoute']);
