@@ -1,7 +1,8 @@
 var express    = require('express');
 var app        = express();
 var mongojs    = require('mongojs');
-var db         = mongojs('mean_project');
+var db         = mongojs('mongodb://admin:123@ds143559.mlab.com:43559/mean_project');
+//mongodb://<dbuser>:<dbpassword>@ds143559.mlab.com:43559/mean_project
 var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 8000;
