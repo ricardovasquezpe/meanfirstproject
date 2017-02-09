@@ -1,10 +1,10 @@
-var express = require('express');
-var app = express();
-var mongojs = require('mongojs');
-var db = mongojs('mean_project');
+var express    = require('express');
+var app        = express();
+var mongojs    = require('mongojs');
+var db         = mongojs('mean_project');
 var bodyParser = require('body-parser');
 
-var port = process.env.PORT || 8000
+var port = process.env.PORT || 8000;
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
