@@ -4,6 +4,8 @@ var mongojs = require('mongojs');
 var db = mongojs('mean_project');
 var bodyParser = require('body-parser');
 
+var port = process.env.PORT || 8000
+
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
@@ -43,5 +45,5 @@ app.put('/updatecontact', function(req, res){
 	);
 })
 
-app.listen(3000);
+app.listen(port);
 console.log("Server running");
