@@ -7,28 +7,28 @@
 	</head>
 	<body ng-controller="indexCtrl">
 		<h1>Contact list app</h1>
-		<div layout="row" ng-repeat="contact in contactList">
+		<div layout="row" ng-repeat="contactView in contactList">
 			<div flex>
 				<md-input-container>
 			        <label>Name</label>
-			        <input value="{{contact.name}}" disabled>
+			        <input value="{{contactView.name}}" disabled>
 			    </md-input-container>
 			</div>
 			<div flex>
 				<md-input-container>
 			        <label>Email</label>
-			        <input value="{{contact.email}}" disabled>
+			        <input value="{{contactView.email}}" disabled>
 			    </md-input-container>
 			</div>
 			<div flex>
 				<md-input-container>
 			        <label>Number</label>
-			        <input value="{{contact.number}}" disabled>
+			        <input value="{{contactView.number}}" disabled>
 			    </md-input-container>
 			</div>
 			<div flex>
-				<md-button class="md-raised md-warn" ng-click="removeContact(contact._id)">Remove</md-button>
-				<md-button class="md-raised" ng-click="selectContact(contact._id)">Select</md-button>
+				<md-button class="md-raised md-warn" ng-click="removeContact(contactView._id)">Remove</md-button>
+				<md-button class="md-raised" ng-click="selectContact(contactView._id)">Select</md-button>
 			</div>
 		</div>
 		<div layout="row">

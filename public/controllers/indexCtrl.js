@@ -2,6 +2,7 @@ app.controller('indexCtrl', ['$scope', '$http', 'indexMdl', function($scope, $ht
 	var refreshListContact = function(){
 		indexMdl.getAllContactList().then(function(data) {
 	        $scope.contactList = data;
+	        $scope.contact = null;
 	    });
 	};
 	refreshListContact();

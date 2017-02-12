@@ -6,7 +6,6 @@ app.service('indexMdl', ['$http', function($http) {
             }, function errorCallback(error){
                 console.log("error: "+error);
         });
-
         return list;
     }
 }]);﻿
