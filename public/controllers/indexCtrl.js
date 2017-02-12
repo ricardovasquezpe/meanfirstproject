@@ -1,12 +1,8 @@
-app.controller('indexCtrl', ['$scope', '$http', function($scope, $http, $location) {
+app.controller('indexCtrl', ['$scope', '$http', 'indexMdl', function($scope, $http, indexMdl) {
 	var refreshListContact = function(){
-		$http.get('/contactlist').then(
-			function successCallback(response){
-		    	$scope.contactList = response.data;
-				$scope.contact = null;
-			}, function errorCallback(error){
-		    	console.log("error: "+error);
-		});
+		indexMdl.getAllContactList().then(function(data) {
+	        $scope.contactList = data;
+	    });
 	};
 	refreshListContact();
 
@@ -45,9 +41,5 @@ app.controller('indexCtrl', ['$scope', '$http', function($scope, $http, $locatio
 			}, function errorCallback(error){
 		    	console.log("error: "+error);
 		});
-	}
-
-	$scope.redir = function(){
-		$location.path("/home" );
 	}
 }]);﻿
